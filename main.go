@@ -21,6 +21,7 @@ func NewOrderPlacer(p *kafka.Producer, topic string) *OrderPlacer {
 	}
 }
 
+// placeOrder
 func (op *OrderPlacer) placeOrder(orderType string, size int) error {
 	var (
 		format  = fmt.Sprintf("%s - %d", orderType, size)
